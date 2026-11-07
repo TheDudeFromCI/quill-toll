@@ -1,0 +1,8 @@
+{
+  "name": "quill-toll",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test tests/core.test.js tests/background.test.js tests/tracker.test.js", "test:browser": "node tests/browser.test.cjs"},
+  "devDependencies": {"linkedom": "0.18.12", "playwright": "1.62.1"}
+}

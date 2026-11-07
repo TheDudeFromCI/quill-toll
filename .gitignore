@@ -1,0 +1,25 @@
+# Dependencies and test output
+node_modules/
+coverage/
+playwright-report/
+test-results/
+*.log
+
+# Build packages and private page captures
+dist/
+*.zip
+*.crx
+*.mhtml
+.work/
+upload/
+
+# Local configuration and signing keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS metadata
+.DS_Store
+Thumbs.db

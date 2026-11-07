@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quill Toll</title><link rel="stylesheet" href="style.css"><script type="module" src="popup.js"></script></head>
+<body class="popup"><main>
+  <header><img src="icons/quill-128.png" alt=""><div><h1>Quill Toll</h1><div class="muted">A little writing. A little wandering.</div></div></header>
+  <section class="wallet" id="wallet" aria-label="Credit balance">
+    <div class="row"><span class="eyebrow">Credits remaining</span><span class="status" id="mode">Loading</span></div>
+    <div class="balance" id="balance">—</div><p id="time">Checking your balance…</p>
+  </section>
+  <div class="actions"><a class="button" href="https://studio.writinghabit.app/" target="_blank" rel="noreferrer">Go write</a><button class="secondary" id="settings">Settings</button></div>
+  <p class="tracker" id="tracker">Open a chapter to check your writing total.</p>
+  <p class="error message" id="error" role="alert" hidden></p>
+  <footer>1 new word = 1 credit = 1 browsing minute</footer>
+</main></body></html>

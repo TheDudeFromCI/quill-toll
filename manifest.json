@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Quill Toll",
+  "version": "1.0.1",
+  "minimum_chrome_version": "120",
+  "description": "Earn a minute of browsing for every new word in WritingHabit.",
+  "permissions": ["storage", "alarms", "idle", "tabs", "webNavigation", "declarativeNetRequest"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "action": {
+    "default_title": "Quill Toll",
+    "default_popup": "popup.html",
+    "default_icon": {"16": "icons/quill-16.png", "32": "icons/quill-32.png", "48": "icons/quill-48.png", "128": "icons/quill-128.png"}
+  },
+  "icons": {"16": "icons/quill-16.png", "32": "icons/quill-32.png", "48": "icons/quill-48.png", "128": "icons/quill-128.png"},
+  "options_page": "options.html",
+  "content_scripts": [{
+    "matches": ["https://studio.writinghabit.app/*"],
+    "js": ["tracker.js", "content.js"],
+    "run_at": "document_idle"
+  }],
+  "web_accessible_resources": [{
+    "resources": ["blocked.html", "style.css", "blocked.js", "icons/quill-128.png"],
+    "matches": ["http://*/*", "https://*/*"]
+  }],
+  "incognito": "not_allowed"
+}

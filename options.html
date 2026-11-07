@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quill Toll · Settings</title><link rel="stylesheet" href="style.css"><script type="module" src="options.js"></script></head>
+<body><main>
+  <header><img src="icons/quill-128.png" alt=""><div><h1>Quill Toll</h1><div class="muted">Put your next chapter first.</div></div></header>
+  <section class="wallet" id="wallet" aria-label="Credit balance"><div class="row"><span class="eyebrow">Credits remaining</span><span class="status" id="mode">Loading</span></div><div class="balance" id="balance">—</div><p id="time">Checking your balance…</p></section>
+  <p class="error message" id="error" role="alert" hidden></p>
+  <section class="card"><h2>Sites that pay the toll</h2>
+    <p class="muted">Add one domain or website URL per line. Its subdomains are included. These sites stay blocked at zero credits.</p>
+    <form id="sites-form"><label for="domains">Your block list</label><textarea id="domains" spellcheck="false" autocapitalize="off" placeholder="reddit.com&#10;youtube.com&#10;instagram.com"></textarea><button type="submit" id="save">Save block list</button><p class="message" id="saved" role="status"></p></form>
+    <p class="message muted">Start by adding your own distractions. WritingHabit always stays accessible.</p>
+  </section>
+  <section class="card"><h2>Your books</h2><p class="muted" id="tracker">Open a WritingHabit chapter with the Overall card visible.</p>
+    <div class="table-wrap"><table><thead><tr><th>Book</th><th>Starting total</th><th>Highest total</th><th>Credits earned</th></tr></thead><tbody id="books"></tbody></table></div>
+    <p class="empty" id="empty">No books calibrated yet. Your first recorded total becomes the starting point.</p>
+  </section>
+  <section class="card notes"><h2>How the toll works</h2><ul>
+    <li>Each word above a book’s highest recorded total earns one credit. Deleting and restoring words earns credits once.</li>
+    <li>A new book starts at its existing word count with zero earned credits. Open each book now to establish its starting point.</li>
+    <li>Phone writing is credited when WritingHabit next shows the updated Overall total on this desktop. Reload the chapter after phone edits if needed.</li>
+    <li>One credit buys one minute. Time is measured continuously and partial minutes carry over across tabs and restarts.</li>
+    <li>Only a listed site in Brave’s focused tab spends credits. Background tabs, other apps, minimized windows, and a locked computer pause the toll. Reading and watching videos in a focused tab still count.</li>
+    <li>The toolbar turns amber while spending. Large balances are abbreviated in the badge. Hover or open the popup for the full balance.</li>
+  </ul></section>
+  <footer>Saved on this browser profile. Keep the extension installed to retain your book records and credits.</footer>
+</main></body></html>
